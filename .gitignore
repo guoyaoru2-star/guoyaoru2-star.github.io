@@ -1,0 +1,17 @@
+# Unused drafts and source material
+ai-lab.css
+ai-lab.html
+ai-lab.js
+bgm-player.js
+hero-portrait.png
+portrait.jpg
+resume-print.html
+郭耀儒 (2).md
+
+# Keep copyrighted music out of the public repository
+audio/
+
+# Local development files
+.DS_Store
+Thumbs.db
+
