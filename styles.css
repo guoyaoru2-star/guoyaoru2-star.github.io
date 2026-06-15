@@ -582,8 +582,138 @@
 }
 
 @media (max-width: 620px) {
+  .portfolio-body {
+    padding-bottom: 14px;
+  }
+
+  .portfolio-body .top-marquee {
+    width: calc(100% - 20px);
+    margin: 10px auto 8px;
+    padding: 8px 10px;
+    gap: 6px;
+    font-size: 8px;
+  }
+
+  .portfolio-body .top-marquee span:first-child {
+    display: none;
+  }
+
+  .portfolio-tv.notes-tv {
+    width: calc(100vw - 12px);
+    max-width: calc(100vw - 12px);
+    margin-inline: 6px;
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .portfolio-tv .screen-wrap {
+    width: 100%;
+    min-width: 0;
+    padding: 5px;
+    border-radius: 13px;
+  }
+
+  .portfolio-tv .notes-screen,
+  .portfolio-tv .screen-inner,
+  .portfolio-tv .notes-channel,
+  .portfolio-tv .portfolio-intro,
+  .portfolio-tv .portfolio-intro > *,
+  .portfolio-tv .portfolio-intro-copy,
+  .portfolio-tv .portfolio-grid {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .portfolio-tv .portfolio-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portfolio-tv .portfolio-item,
+  .portfolio-tv .portfolio-item > span,
+  .portfolio-tv .portfolio-item b {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .portfolio-tv .portfolio-item b {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .portfolio-tv .notes-screen {
+    border-radius: 10px;
+  }
+
+  .portfolio-tv .screen-inner {
+    padding: 18px 14px 24px;
+    overflow-x: hidden;
+  }
+
+  .portfolio-tv .hud {
+    gap: 5px;
+    font-size: 8px;
+  }
+
+  .portfolio-tv .notes-channel {
+    padding-top: 14px;
+  }
+
+  .portfolio-tv .portfolio-intro {
+    gap: 16px;
+    margin: 18px 0 20px;
+    padding-bottom: 18px;
+  }
+
   .notes-channel .portfolio-intro h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 13vw, 54px);
+    letter-spacing: 0.01em;
+    line-height: 1.1;
     white-space: normal;
+  }
+
+  .portfolio-intro-copy > p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .portfolio-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  .portfolio-filters button {
+    min-width: 0;
+    padding: 9px 7px;
+    overflow: hidden;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .portfolio-filters button:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .portfolio-item,
+  .portfolio-item img {
+    min-height: 220px;
+  }
+
+  .portfolio-item > span {
+    right: 11px;
+    bottom: 11px;
+    left: 11px;
+  }
+
+  .portfolio-item b {
+    font-size: 17px;
   }
 }
 
