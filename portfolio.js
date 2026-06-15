@@ -7,10 +7,18 @@ const lightboxTitle = document.querySelector("[data-lightbox-title]");
 const closeLightbox = document.querySelector("[data-lightbox-close]");
 const previousWork = document.querySelector("[data-lightbox-prev]");
 const nextWork = document.querySelector("[data-lightbox-next]");
+const desktopCanvas = document.querySelector("[data-desktop-canvas]");
 
 let portfolioItems = [];
 let visibleItems = [];
 let activeIndex = 0;
+
+function syncDesktopCanvas() {
+  if (!desktopCanvas) return;
+  const viewportWidth = Math.min(window.innerWidth, window.screen.width);
+  const isMobile = viewportWidth < 760;
+  desktopCanvas.style.zoom = isMobile ? String(viewportWidth / 1440) : "";
+}
 
 function openWork(item) {
   if (!lightbox || !lightboxImage || !item) return;
@@ -94,3 +102,6 @@ fetch("portfolio-data.json")
       portfolioGrid.innerHTML = '<p class="portfolio-loading">视觉信号加载失败，请刷新页面重试。</p>';
     }
   });
+
+syncDesktopCanvas();
+window.addEventListener("resize", syncDesktopCanvas);

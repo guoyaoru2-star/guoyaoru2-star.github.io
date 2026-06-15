@@ -2271,4 +2271,159 @@ dd {
   }
 }
 
+/* Keep the portfolio's desktop composition intact on phones; only scale the canvas. */
+@media (max-width: 759px) {
+  .portfolio-body {
+    min-width: 0;
+    padding-bottom: 0;
+  }
+
+  .portfolio-desktop-canvas {
+    width: 1440px;
+    transform-origin: top left;
+  }
+
+  .portfolio-body .top-marquee {
+    display: flex;
+    width: min(1280px, calc(100% - 32px));
+    margin: 20px auto 12px;
+    padding: 8px 14px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 10px;
+  }
+
+  .portfolio-body .top-marquee span:first-child {
+    display: inline;
+  }
+
+  .portfolio-tv.notes-tv {
+    width: min(1420px, calc(100% - 32px));
+    max-width: none;
+    margin: 0 auto;
+    padding: 22px;
+    overflow: visible;
+    border-radius: 28px;
+  }
+
+  .portfolio-tv .screen-wrap {
+    width: auto;
+    min-width: auto;
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .portfolio-tv .notes-screen {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    border-radius: 13px;
+  }
+
+  .portfolio-tv .screen-inner {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    padding: 30px 38px;
+    overflow-x: visible;
+  }
+
+  .portfolio-tv .hud {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: inherit;
+  }
+
+  .portfolio-tv .notes-channel {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    padding-top: 28px;
+  }
+
+  .portfolio-tv .portfolio-intro {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    margin: 28px 0 34px;
+    padding-bottom: 24px;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 28px;
+  }
+
+  .portfolio-tv .portfolio-intro > *,
+  .portfolio-tv .portfolio-intro-copy {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .notes-channel .portfolio-intro h1 {
+    max-width: none;
+    font-size: clamp(52px, 6vw, 92px);
+    letter-spacing: 0.04em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .portfolio-intro-copy > p {
+    font-size: inherit;
+    line-height: 1.9;
+  }
+
+  .portfolio-filters {
+    display: flex;
+    grid-template-columns: none;
+    gap: 9px;
+    margin-bottom: 22px;
+  }
+
+  .portfolio-filters button,
+  .portfolio-filters button:first-child {
+    min-width: auto;
+    padding: 9px 12px;
+    overflow: visible;
+    grid-column: auto;
+    font-size: inherit;
+    letter-spacing: 0.08em;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .portfolio-tv .portfolio-grid {
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .portfolio-tv .portfolio-item.wide {
+    grid-column: span 2;
+  }
+
+  .portfolio-tv .portfolio-item,
+  .portfolio-tv .portfolio-item img {
+    min-height: 250px;
+  }
+
+  .portfolio-tv .portfolio-item > span {
+    right: 16px;
+    bottom: 15px;
+    left: 16px;
+  }
+
+  .portfolio-tv .portfolio-item b {
+    overflow: visible;
+    max-width: none;
+    font-size: 20px;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}
+
 
