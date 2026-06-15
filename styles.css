@@ -53,10 +53,24 @@
   line-height: 1;
 }
 
-.portfolio-intro > p {
+.portfolio-intro-copy > p {
   margin: 0;
   color: rgba(212, 168, 87, 0.84);
   line-height: 1.9;
+}
+
+.portfolio-intro-copy a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--gold-bright);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.portfolio-intro-copy a:hover {
+  text-decoration: underline;
 }
 
 .portfolio-filters {
@@ -111,6 +125,18 @@
 
 .portfolio-item[hidden] {
   display: none;
+}
+
+.portfolio-loading {
+  grid-column: 1 / -1;
+  min-height: 220px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(212, 168, 87, 0.3);
+  color: var(--gold-dim);
+  font-family: var(--mono);
+  letter-spacing: 0.12em;
 }
 
 .portfolio-item::after {
@@ -238,6 +264,84 @@
   color: var(--gold-bright);
   font-family: var(--serif);
   font-size: 20px;
+}
+
+.lightbox-open {
+  overflow: hidden;
+}
+
+/* Image source and license page */
+.credits-body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--gold);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(212, 168, 87, 0.12), transparent 35%),
+    #0c0805;
+  font-family: var(--sans);
+}
+
+.credits-page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 80px;
+}
+
+.credits-back,
+.credits-page a {
+  color: var(--gold-bright);
+}
+
+.credits-kicker {
+  margin: 54px 0 8px;
+  color: var(--gold-dim);
+  font-family: var(--mono);
+  letter-spacing: 0.14em;
+}
+
+.credits-page h1 {
+  margin: 0;
+  color: var(--gold-bright);
+  font-family: var(--serif);
+  font-size: clamp(42px, 8vw, 92px);
+}
+
+.credits-page > p:not(.credits-kicker) {
+  max-width: 760px;
+  color: rgba(212, 168, 87, 0.78);
+  line-height: 1.9;
+}
+
+.credits-table-wrap {
+  margin-top: 36px;
+  overflow-x: auto;
+  border: 1px solid rgba(212, 168, 87, 0.24);
+}
+
+.credits-page table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(212, 168, 87, 0.035);
+  font-size: 12px;
+}
+
+.credits-page th,
+.credits-page td {
+  padding: 13px 12px;
+  border-bottom: 1px solid rgba(212, 168, 87, 0.16);
+  text-align: left;
+  vertical-align: top;
+}
+
+.credits-page th {
+  color: var(--gold-bright);
+  font-family: var(--mono);
+  letter-spacing: 0.08em;
+}
+
+.credits-page td:first-child {
+  color: var(--gold-dim);
+  font-family: var(--mono);
 }
 
 
